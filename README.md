@@ -7,6 +7,14 @@ Vim syntax file for Motoman INFORM III.
 ### Installation
 
 Copy jbi.vim to `~/.vim/syntax/` or `$VIMRUNTIME/syntax/`.
+Use the command
+
+    :set ft=jbi
+
+to enable syntax highlighting.
+
+
+### Automatic filetype detection
 
 You might want to add the following lines to `~/.vim/filetype.vim` to enable
 automatic detection of the jbi filetype:
