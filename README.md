@@ -40,3 +40,16 @@ or `CTRL-W_CTRL-F`. To enable this for .jbi files add the following to your
     " directory.
     set path+=/path/to/jbi/files
 
+### Screenshots
+
+#### default
+[!default colorscheme](https://github.com/matthijsk/motoman-inform-vim-syntax/raw/master/img/sample-default.png)
+
+#### molokai
+[!molokai colorscheme](https://github.com/matthijsk/motoman-inform-vim-syntax/raw/master/img/sample-molokai.png)
+
+#### rdark
+[!rdark colorscheme](https://github.com/matthijsk/motoman-inform-vim-syntax/raw/master/img/sample-rdark.png)
+
+#### xoria256
+[!xoria256 colorscheme](https://github.com/matthijsk/motoman-inform-vim-syntax/raw/master/img/sample-xoria256.png)
