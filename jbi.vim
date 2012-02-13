@@ -49,15 +49,20 @@ syn keyword	jbiFunction TOOLON TOOLOF
 " Other
 syn keyword	jbiFunction GETARG SETUALM DIALOG GETTOOL SETTOOL
 
+" Boolean keywords
 syn keyword	jbiBoolean ON OFF HIGH LOW
 
+" Conditinol statements
 syn keyword	jbiConditional IF ELSE SWITCH ENDSWITCH IFTHEN ENDIF ANDIF
 \                              ORIF ELSEIF ENDWAIT
 
+" Repeat statements
 syn keyword	jbiRepeat UNTIL WHILE ENDWHILE
 
+" Label statements
 syn keyword	jbiLabel CASE DEFAULT LABEL QUE
 
+" Operators
 syn keyword	jbiOperator EXPRESS
 
 syn keyword	jbiFunction MID VAL
@@ -85,6 +90,7 @@ syn match	jbiType /PX\d\d\d\|PX\[/hs=s,he=s+2
 syn match	jbiType /LP\d\d\d\|LP\[/hs=s,he=s+2
 syn match	jbiType /LPX\d\d\d\|LPX\[/hs=s,he=s+3
 
+" Special keywords
 syn match	jbiSpecial "AEF#"
 syn match	jbiSpecial "AG#"
 syn match	jbiSpecial "AO#"
@@ -113,10 +119,13 @@ syn match	jbiSpecial "UF#"
 syn match	jbiSpecial "WEV#"
 syn match	jbiSpecial "$RV"
 
+" Specify comment region
 syn region	jbiComment start=+'+ end=+$+ contains=jbiTodo
 
+" Specify string region
 syn region	jbiString start=+"+ end=+"+ end=+$+
 
+" Specify job header region
 syn region	jbiHeader start=+/+ end=+$+ contains=jbiNumbers
 
 syn match	jbiNumbers "[0-9]"
