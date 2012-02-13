@@ -58,7 +58,7 @@ syn keyword	jbiOperator EXPRESS
 syn keyword	jbiFunction MID VAL
 
 " Function parameters
-syn keyword	jbiType ACC ALL AMP ANGL ANT AN3 AN4 ATT AV AVP BF BP BV CR DEC DIS ENTRY EX FREQ LBP LEX MODE MT MTE MTF OFV PL PX RBn RF SPDL STn T TF UNITn V VE VJ VR WELDn WTM
+syn keyword	jbiType ACC ALL AMP ANGL ANT AN3 AN4 ATT AV AVP BF BP BV CR DEC DIS ENTRY EX FREQ LBP LEX MODE MT MTE MTF OFV PL PX RBn RF SPDL SRCH STn T TF UNITn V VE VJ VR WELDn WTM
 
 " Inform types
 syn match	jbiType /B\d\d\d\|B\[/hs=s,he=s+1
