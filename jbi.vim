@@ -73,7 +73,7 @@ syn match	jbiType /S\d\d\d\|S\[/hs=s,he=s+1
 syn match	jbiType /LS\d\d\d\|LS\[/hs=s,he=s+2
 
 syn match	jbiType /P\d\d\d\|P\[/hs=s,he=s+1
-syn match	jbiType /PX\d\d\d\|PX\[/hs=s,he=s+3
+syn match	jbiType /PX\d\d\d\|PX\[/hs=s,he=s+2
 syn match	jbiType /LP\d\d\d\|LP\[/hs=s,he=s+2
 syn match	jbiType /LPX\d\d\d\|LPX\[/hs=s,he=s+3
 
