@@ -1,7 +1,7 @@
 " Vim syntax file for the Motoman INFORM III robot programming language.
 " Language:	INFORM III
 " Maintainer:	Matthijs Kool <matthijzkNOSPAMPLZgmailKTHXBAIcom>
-" Last Change:	2012 Jan 30
+" Last Change:	2012 Feb 13 
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
@@ -17,7 +17,7 @@ syn case match
 syn keyword	jbiFunction DOUT DIN WAIT PULSE AOUT ARATION ARATIOF ANTOUT
 
 " Control instructions
-syn keyword	jbiStatement JUMP CALL TIMER RET NOP PAUSE CWAIT NWAIT ENWAIT MSG ADVINIT ADVSTOP END PSTART NSRCH
+syn keyword	jbiStatement JUMP CALL TIMER RET NOP PAUSE CWAIT NWAIT ENWAIT MSG ADVINIT ADVSTOP END PSTART PWAIT NSRCH
 
 " Operating instructions
 syn keyword	jbiFunction CLEAR INC DEC SET ADD SUB MUL DIV CNVRT AND OR NOT XOR MFRAME SETE GETE GETS SQRT SIN COS ATAN MULMAT INVMAT SETFILE GETFILE SETREG GETREG
