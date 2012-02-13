@@ -17,10 +17,13 @@ syn case match
 syn keyword	jbiFunction DOUT DIN WAIT PULSE AOUT ARATION ARATIOF ANTOUT
 
 " Control instructions
-syn keyword	jbiStatement JUMP CALL TIMER RET NOP PAUSE CWAIT NWAIT ENWAIT MSG ADVINIT ADVSTOP END PSTART PWAIT NSRCH
+syn keyword	jbiStatement JUMP CALL TIMER RET NOP PAUSE CWAIT NWAIT ENWAIT
+\                            MSG ADVINIT ADVSTOP END PSTART PWAIT NSRCH
 
 " Operating instructions
-syn keyword	jbiFunction CLEAR INC DEC SET ADD SUB MUL DIV CNVRT AND OR NOT XOR MFRAME SETE GETE GETS SQRT SIN COS ATAN MULMAT INVMAT SETFILE GETFILE SETREG GETREG
+syn keyword	jbiFunction CLEAR INC DEC SET ADD SUB MUL DIV CNVRT AND OR NOT
+\                           XOR MFRAME SETE GETE GETS SQRT SIN COS ATAN MULMAT
+\                           INVMAT SETFILE GETFILE SETREG GETREG
 
 " Move instructions
 syn keyword	jbiFunction MOVJ MOVL MOVC MOVS IMOV SPEED REFP
@@ -29,7 +32,8 @@ syn keyword	jbiFunction MOVJ MOVL MOVC MOVS IMOV SPEED REFP
 syn keyword	jbiFunction SFTON SFTOF MSHIFT
 
 " Arc welding instructions
-syn keyword	jbiFunction ARCON ARCOF VWELD AWELD ARCSET WVON WVOF ARCCTS ARCCTE
+syn keyword	jbiFunction ARCON ARCOF VWELD AWELD ARCSET WVON WVOF ARCCTS
+\                           ARCCTE
 
 syn keyword	jbiFunction RETRY REPLAY ANTSTK
 
@@ -47,7 +51,8 @@ syn keyword	jbiFunction GETARG SETUALM DIALOG GETTOOL SETTOOL
 
 syn keyword	jbiBoolean ON OFF HIGH LOW
 
-syn keyword	jbiConditional IF ELSE SWITCH ENDSWITCH IFTHEN ENDIF ANDIF ORIF ELSEIF ENDWAIT
+syn keyword	jbiConditional IF ELSE SWITCH ENDSWITCH IFTHEN ENDIF ANDIF
+\                              ORIF ELSEIF ENDWAIT
 
 syn keyword	jbiRepeat UNTIL WHILE ENDWHILE
 
@@ -58,7 +63,10 @@ syn keyword	jbiOperator EXPRESS
 syn keyword	jbiFunction MID VAL
 
 " Function parameters
-syn keyword	jbiType ACC ALL AMP ANGL ANT AN3 AN4 ATT AV AVP BF BP BV CR DEC DIS ENTRY EX FREQ LBP LEX MODE MT MTE MTF OFV PL PX RBn RF SMODE SPDL SRCH STn T TF UNITn V VE VJ VR WELDn WTM
+syn keyword	jbiType ACC ALL AMP ANGL ANT AN3 AN4 ATT AV AVP BF BP BV CR
+\                       DEC DIS ENTRY EX FREQ LBP LEX MODE MT MTE MTF OFV PL
+\                       PX RBn RF SMODE SPDL SRCH STn T TF UNITn V VE VJ VR
+\                       WELDn WTM
 
 " Inform types
 syn match	jbiType /B\d\d\d\|B\[/hs=s,he=s+1
