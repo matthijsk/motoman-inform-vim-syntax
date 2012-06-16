@@ -52,7 +52,7 @@ syn keyword	jbiFunction GETARG SETUALM DIALOG GETTOOL SETTOOL
 " Boolean keywords
 syn keyword	jbiBoolean ON OFF HIGH LOW
 
-" Conditinol statements
+" Conditional statements
 syn keyword	jbiConditional IF ELSE SWITCH ENDSWITCH IFTHEN ENDIF ANDIF
 \                              ORIF ELSEIF ENDWAIT
 
