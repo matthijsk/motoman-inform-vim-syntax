@@ -11,7 +11,7 @@ set cpo&vim
 setlocal suffixesadd+=.jbi,.JBI
 setlocal isfname-=:
 
-let b:undo_ftplugin = "setlocal sua<"
+let b:undo_ftplugin = "setlocal sua< isf<"
 
 let &cpo = s:keepcpo
 unlet s:keepcpo
