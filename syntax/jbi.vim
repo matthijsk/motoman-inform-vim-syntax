@@ -19,7 +19,7 @@ syn keyword	jbiFunction DOUT DIN WAIT PULSE AOUT ARATION ARATIOF ANTOUT
 
 " Control instructions
 syn keyword	jbiStatement JUMP CALL TIMER RET NOP PAUSE CWAIT NWAIT ENWAIT
-\                        MSG ADVINIT ADVSTOP END PSTART PWAIT NSRCH COMM
+\                            MSG ADVINIT ADVSTOP END PSTART PWAIT NSRCH COMM
 
 " Operating instructions
 syn keyword	jbiFunction CLEAR INC DEC SET ADD SUB MUL DIV CNVRT AND OR NOT
@@ -56,7 +56,7 @@ syn keyword	jbiBoolean ON OFF HIGH LOW
 
 " Conditional statements
 syn keyword	jbiConditional IF ELSE SWITCH ENDSWITCH IFTHEN ENDIF ANDIF
-\                          ORIF ELSEIF ENDWAIT IFTHENEXP ELSEIFEXP
+\                              ORIF ELSEIF ENDWAIT IFTHENEXP ELSEIFEXP
 
 " Repeat statements
 syn keyword	jbiRepeat UNTIL WHILE ENDWHILE FOR START NEXT
@@ -76,9 +76,9 @@ syn keyword	jbiFunction ASC MID VAL LEN CAT
 
 " Function parameters
 syn keyword	jbiType ACC ALL AMP ANGL ANT AN3 AN4 ATT AV AVP BF BP BV CR
-\                   DEC DIS ENTRY EX FREQ LBP LEX MODE MT MTE MTF OFV PL
-\                   PX RBn RF SMODE SPDL SRCH STn T TF UNITn V VE VJ VR
-\                   WELDn WTM
+\                       DEC DIS ENTRY EX FREQ LBP LEX MODE MT MTE MTF OFV PL
+\                       PX RBn RF SMODE SPDL SRCH STn T TF UNITn V VE VJ VR
+\                       WELDn WTM
 
 " Inform types
 syn match	jbiType /\v(<|<ARGF)@4<=L?[BIDRS](\d{3}>|\[)@=/
