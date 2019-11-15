@@ -1,10 +1,10 @@
-# motoman-inform-vim-syntax
+## motoman-inform-vim-syntax
 
-# [Vim][1] syntax and filetype plugin for [Motoman][2] INFORM III.
+## [Vim][1] syntax and filetype plugin for [Motoman][2] INFORM III.
 
-## Installation
+### Installation
 
-### Installation with vim-plug:  ~  
+#### Installation with vim-plug:
 
 Put this in your .vimrc:  > 
     call plug#begin('~/.vim/plugged')
@@ -17,7 +17,7 @@ For the first installation run: >
 Update every once in a while with: > 
     :PlugUpdate
 
-### Manual installation:  ~  
+#### Manual installation
 
 Extract and copy the folders 
 `/doc`, `/ftdetect`, `/ftplugin`, `/indent` and `/syntax` 
@@ -40,7 +40,7 @@ to use the help within Vim after installation. >
     :help krl
 
 
-## Navigating jobs
+### Navigating jobs
 
 It's nice to be able to quickly navigate through the source code, especially
 if you make heavy use of `CALL JOB:<JOBNAME>` statements. The current file
@@ -49,7 +49,7 @@ on directory and will open the netrw plugin shipped with Vim. After a few `gf`
 you can go back with `Ctrl-O` (**O**lder position) and go back in with `Ctrl-I`
 (go back **I**n).
 
-## Screenshots
+### Screenshots
 
 #### default
 
