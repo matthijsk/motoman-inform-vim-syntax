@@ -64,6 +64,9 @@ syn keyword	jbiRepeat UNTIL WHILE ENDWHILE FOR START NEXT
 syn keyword	jbiOperator EXPRESS
 syn match 	jbiOperator /[+\-*/=<>]/
 
+" Delimiter
+syn match 	jbiDelimiter /[:\[\]()]/
+
 " Label statements
 syn keyword	jbiLabel CASE DEFAULT LABEL QUE
 syn match 	jbiLabel /\v\*@1<=(\u|\d)+>/
@@ -159,6 +162,7 @@ if version >= 508 || !exists("did_basic_syn_inits")
   HiLink jbiRepeat		Repeat
   HiLink jbiLabel		Label
   HiLink jbiOperator		Operator
+  HiLink jbiDelimiter		Delimiter
 
   HiLink jbiHeader		PreProc
 
