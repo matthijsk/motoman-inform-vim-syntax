@@ -1,4 +1,4 @@
-## motoman-inform-vim-syntax
+## motoman-inform-vim-plugin
 
 ## [Vim][1] syntax and filetype plugin for [Motoman][2] INFORM III.
 
