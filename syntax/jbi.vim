@@ -55,7 +55,7 @@ syn keyword	jbiBoolean ON OFF HIGH LOW
 
 " Conditional statements
 syn keyword	jbiConditional IF ELSE SWITCH ENDSWITCH IFTHEN ENDIF ANDIF
-\                              ORIF ELSEIF ENDWAIT
+\                          ORIF ELSEIF ENDWAIT IFTHENEXP ELSEIFEXP
 
 " Repeat statements
 syn keyword	jbiRepeat UNTIL WHILE ENDWHILE
