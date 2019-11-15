@@ -62,6 +62,7 @@ syn keyword	jbiRepeat UNTIL WHILE ENDWHILE FOR START NEXT
 
 " Label statements
 syn keyword	jbiLabel CASE DEFAULT LABEL QUE
+syn match 	jbiLabel /\v\*@1<=(\u|\d)+>/
 
 " Operators
 syn keyword	jbiOperator EXPRESS
