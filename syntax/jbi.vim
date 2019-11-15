@@ -99,6 +99,9 @@ syn match	jbiType /\v(<|<ARGF)@4<=L?[BIDRS](\d{3}>|\[)@=/
 syn match	jbiType /\vL?PX?(\d{3}>|\[)@=/
 syn match 	jbiType /\vLBP(\d{3}>|\[)@=/
 
+" positions
+syn match 	jbiType /\v<B?(P|C)(\d{3,5}>)@=/
+
 " Special keywords
 syn match	jbiSpecial "AEF#"
 syn match	jbiSpecial "AG#"
