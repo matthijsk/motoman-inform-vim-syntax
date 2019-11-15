@@ -1,8 +1,6 @@
-jbi.vim
-=======
+# motoman-inform-vim-syntax
 
 # [Vim][1] syntax and filetype plugin for [Motoman][2] INFORM III.
-----------------------------------------------------------------------
 
 ## Installation
 
@@ -48,8 +46,8 @@ It's nice to be able to quickly navigate through the source code, especially
 if you make heavy use of `CALL JOB:<JOBNAME>` statements. The current file
 under the cursor can be opened using `gf` or `CTRL-W_CTRL-F`. This also work
 on directory and will open the netrw plugin shipped with Vim. After a few `gf`
-you can go back with `Ctrl-O` (`O`lder position) and go back in with `Ctrl-I`
-(go `I`n).
+you can go back with `Ctrl-O` (**O**lder position) and go back in with `Ctrl-I`
+(go back **I**n).
 
 ## Screenshots
 
