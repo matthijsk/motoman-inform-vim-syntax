@@ -129,7 +129,7 @@ syn region	jbiString start=+"+ end=+"+ end=+$+
 " Specify job header region
 syn region	jbiHeader start=+/+ end=+$+ contains=jbiNumbers
 
-syn match	jbiNumbers "[0-9]"
+syn match	jbiNumbers "\<[0-9.]\+\>"
 
 syn keyword	jbiTodo contained TODO FIXME
 
