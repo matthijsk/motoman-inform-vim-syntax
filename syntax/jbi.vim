@@ -1,7 +1,8 @@
 " Vim syntax file for the Motoman INFORM III robot programming language.
 " Language:	INFORM III
 " Maintainer:	Matthijs Kool <matthijzkNOSPAMPLZgmailKTHXBAIcom>
-" Last Change:	2012 Feb 13 
+" Contributor:  Patrick Meiser-Knosowski knosowski@graeff.de
+" Last Change:	2017 Nov 15
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
