@@ -23,8 +23,8 @@ syn keyword	jbiStatement JUMP CALL TIMER RET NOP PAUSE CWAIT NWAIT ENWAIT
 
 " Operating instructions
 syn keyword	jbiFunction CLEAR INC DEC SET ADD SUB MUL DIV CNVRT AND OR NOT
-\                           XOR MFRAME SETE GETE GETS SQRT SIN COS ATAN MULMAT
-\                           INVMAT SETFILE GETFILE SETREG GETREG
+\                       XOR MFRAME SETE GETE GETS SQRT SIN COS ATAN MULMAT
+\                       INVMAT SETFILE GETFILE SETREG GETREG VAL2STR
 
 " Move instructions
 syn keyword	jbiFunction MOVJ MOVL MOVC MOVS IMOV SPEED REFP
