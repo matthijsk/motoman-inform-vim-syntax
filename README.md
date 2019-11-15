@@ -6,15 +6,18 @@
 
 #### Installation with vim-plug:
 
-Put this in your .vimrc:  > 
+Put this in your .vimrc:
+
     call plug#begin('~/.vim/plugged')
       Plug 'matthijsk/motoman-inform-vim-syntax'
     call plug#end()
 
-For the first installation run: > 
+For the first installation run:
+
     :PlugInstall
 
-Update every once in a while with: > 
+Update every once in a while with:
+
     :PlugUpdate
 
 #### Manual installation
@@ -26,17 +29,21 @@ into your
 directory. 
 Overwrite jbi.\* files from older installation.
 
-Put the following in your .vimrc: > 
+Put the following in your .vimrc:
+
     syntax on
     filetype plugin on
 
-You may have to run > 
+You may have to run
+
     :helptags ~/.vim/doc/
 
-or > 
+or
+
     :helptags ~/vimfiles/doc/
 
-to use the help within Vim after installation. > 
+to use the help within Vim after installation.
+
     :help krl
 
 
