@@ -66,7 +66,7 @@ syn keyword	jbiLabel CASE DEFAULT LABEL QUE
 " Operators
 syn keyword	jbiOperator EXPRESS
 
-syn keyword	jbiFunction MID VAL
+syn keyword	jbiFunction ASC MID VAL LEN CAT
 
 " Function parameters
 syn keyword	jbiType ACC ALL AMP ANGL ANT AN3 AN4 ATT AV AVP BF BP BV CR
