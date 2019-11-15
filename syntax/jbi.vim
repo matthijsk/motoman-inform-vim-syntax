@@ -80,22 +80,8 @@ syn keyword	jbiType ACC ALL AMP ANGL ANT AN3 AN4 ATT AV AVP BF BP BV CR
 \                   WELDn WTM
 
 " Inform types
-" syn match	jbiType /B\d\d\d\|B\[/hs=s,he=s+1
-" syn match	jbiType /LB\d\d\d\|LB\[/hs=s,he=s+2
-" syn match	jbiType /I\d\d\d\|I\[/hs=s,he=s+1
-" syn match	jbiType /LI\d\d\d\|LI\[/hs=s,he=s+2
-" syn match	jbiType /D\d\d\d\|D\[/hs=s,he=s+1
-" syn match	jbiType /LD\d\d\d\|LD\[/hs=s,he=s+2
-" syn match	jbiType /R\d\d\d\|R\[/hs=s,he=s+1
-" syn match	jbiType /LR\d\d\d\|LR\[/hs=s,he=s+2
-" syn match	jbiType /S\d\d\d\|S\[/hs=s,he=s+1
-" syn match	jbiType /LS\d\d\d\|LS\[/hs=s,he=s+2
 syn match	jbiType /\v(<|<ARGF)@4<=L?[BIDRS](\d{3}>|\[)@=/
 
-" syn match	jbiType /P\d\d\d\|P\[/hs=s,he=s+1
-" syn match	jbiType /PX\d\d\d\|PX\[/hs=s,he=s+2
-" syn match	jbiType /LP\d\d\d\|LP\[/hs=s,he=s+2
-" syn match	jbiType /LPX\d\d\d\|LPX\[/hs=s,he=s+3
 syn match	jbiType /\vL?PX?(\d{3}>|\[)@=/
 syn match 	jbiType /\vLBP(\d{3}>|\[)@=/
 
