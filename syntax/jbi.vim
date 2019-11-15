@@ -19,7 +19,7 @@ syn keyword	jbiFunction DOUT DIN WAIT PULSE AOUT ARATION ARATIOF ANTOUT
 
 " Control instructions
 syn keyword	jbiStatement JUMP CALL TIMER RET NOP PAUSE CWAIT NWAIT ENWAIT
-\                            MSG ADVINIT ADVSTOP END PSTART PWAIT NSRCH
+\                        MSG ADVINIT ADVSTOP END PSTART PWAIT NSRCH COMM
 
 " Operating instructions
 syn keyword	jbiFunction CLEAR INC DEC SET ADD SUB MUL DIV CNVRT AND OR NOT
