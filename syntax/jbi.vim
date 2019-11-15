@@ -109,6 +109,7 @@ syn match	jbiSpecial /JOB:/hs=s,he=e-1
 syn match	jbiSpecial "LONG"
 syn match	jbiSpecial "MREG#"
 syn match	jbiSpecial "OT#"
+syn match	jbiSpecial "OG#"
 syn match	jbiSpecial "OGH#"
 syn match	jbiSpecial "OH#"
 syn match	jbiSpecial "RIN#"
