@@ -97,6 +97,7 @@ syn match	jbiType /\v(<|<ARGF)@4<=L?[BIDRS](\d{3}>|\[)@=/
 " syn match	jbiType /LP\d\d\d\|LP\[/hs=s,he=s+2
 " syn match	jbiType /LPX\d\d\d\|LPX\[/hs=s,he=s+3
 syn match	jbiType /\vL?PX?(\d{3}>|\[)@=/
+syn match 	jbiType /\vLBP(\d{3}>|\[)@=/
 
 " Special keywords
 syn match	jbiSpecial "AEF#"
