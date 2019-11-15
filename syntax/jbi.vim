@@ -60,12 +60,13 @@ syn keyword	jbiConditional IF ELSE SWITCH ENDSWITCH IFTHEN ENDIF ANDIF
 " Repeat statements
 syn keyword	jbiRepeat UNTIL WHILE ENDWHILE FOR START NEXT
 
+" Operators
+syn keyword	jbiOperator EXPRESS
+syn match 	jbiOperator /[+\-*/=<>]/
+
 " Label statements
 syn keyword	jbiLabel CASE DEFAULT LABEL QUE
 syn match 	jbiLabel /\v\*@1<=(\u|\d)+>/
-
-" Operators
-syn keyword	jbiOperator EXPRESS
 
 syn keyword	jbiFunction ASC MID VAL LEN CAT
 
