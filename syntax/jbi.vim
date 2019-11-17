@@ -2,7 +2,7 @@
 " Language:	INFORM III
 " Maintainer:	Matthijs Kool <matthijzkNOSPAMPLZgmailKTHXBAIcom>
 " Contributor:  Patrick Meiser-Knosowski knosowski@graeff.de
-" Last Change:	2017 Nov 15
+" Last Change:	2019 Nov 17
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
