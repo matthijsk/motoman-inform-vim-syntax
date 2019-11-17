@@ -8,11 +8,11 @@
 
 Put this in your .vimrc:
 
-    ```vim
-    call plug#begin('~/.vim/plugged')
-      Plug 'matthijsk/motoman-inform-vim-syntax'
-    call plug#end()
-    ```
+```vim
+call plug#begin('~/.vim/plugged')
+  Plug 'matthijsk/motoman-inform-vim-syntax'
+call plug#end()
+```
 
 For the first installation run:
 
@@ -33,10 +33,10 @@ Overwrite jbi.vim files from older installation.
 
 Put the following in your .vimrc:
 
-    ```vim
-    syntax on
-    filetype plugin on
-    ```
+```vim
+syntax on
+filetype plugin on
+```
 
 
 ### Navigating jobs
