@@ -83,8 +83,8 @@ syn keyword	jbiType ACC ALL AMP ANGL ANT AN3 AN4 ATT AV AVP BF BP BV CR
 " Inform types
 syn match	jbiType /\v(<|<ARGF)@4<=L?[BIDRS](\d{3}>|\[)@=/
 
-syn match	jbiType /\vL?PX?(\d{3}>|\[)@=/
-syn match 	jbiType /\vLBP(\d{3}>|\[)@=/
+syn match	jbiType /\v<L?PX?(\d{3}>|\[)@=/
+syn match 	jbiType /\v<LBP(\d{3}>|\[)@=/
 
 " positions
 syn match 	jbiType /\v<B?(P|C)(\d{3,5}>)@=/
