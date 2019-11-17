@@ -23,28 +23,16 @@ Update every once in a while with:
 #### Manual installation
 
 Extract and copy the folders 
-`/doc`, `/ftdetect`, `/ftplugin`, `/indent` and `/syntax` 
+`/ftdetect`, `/ftplugin` and `/syntax` 
 into your 
 `~/.vim/` or `%USERPROFILE%\vimfiles\` 
 directory. 
-Overwrite jbi.\* files from older installation.
+Overwrite jbi.vim files from older installation.
 
 Put the following in your .vimrc:
 
     syntax on
     filetype plugin on
-
-You may have to run
-
-    :helptags ~/.vim/doc/
-
-or
-
-    :helptags ~/vimfiles/doc/
-
-to use the help within Vim after installation.
-
-    :help krl
 
 
 ### Navigating jobs
