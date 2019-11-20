@@ -1,7 +1,8 @@
 " Vim syntax file for the Motoman INFORM III robot programming language.
 " Language:	INFORM III
 " Maintainer:	Matthijs Kool <matthijzkNOSPAMPLZgmailKTHXBAIcom>
-" Last Change:	2012 Feb 13 
+" Contributor:  Patrick Meiser-Knosowski knosowski@graeff.de
+" Last Change:	2019 Nov 17
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
@@ -18,12 +19,13 @@ syn keyword	jbiFunction DOUT DIN WAIT PULSE AOUT ARATION ARATIOF ANTOUT
 
 " Control instructions
 syn keyword	jbiStatement JUMP CALL TIMER RET NOP PAUSE CWAIT NWAIT ENWAIT
-\                            MSG ADVINIT ADVSTOP END PSTART PWAIT NSRCH
+\                            MSG ADVINIT ADVSTOP END PSTART PWAIT NSRCH COMM
 
 " Operating instructions
 syn keyword	jbiFunction CLEAR INC DEC SET ADD SUB MUL DIV CNVRT AND OR NOT
 \                           XOR MFRAME SETE GETE GETS SQRT SIN COS ATAN MULMAT
-\                           INVMAT SETFILE GETFILE SETREG GETREG
+\                           INVMAT SETFILE GETFILE SETREG GETREG VAL2STR
+\                           GETPOS
 
 " Move instructions
 syn keyword	jbiFunction MOVJ MOVL MOVC MOVS IMOV SPEED REFP
@@ -54,18 +56,24 @@ syn keyword	jbiBoolean ON OFF HIGH LOW
 
 " Conditional statements
 syn keyword	jbiConditional IF ELSE SWITCH ENDSWITCH IFTHEN ENDIF ANDIF
-\                              ORIF ELSEIF ENDWAIT
+\                              ORIF ELSEIF ENDWAIT IFTHENEXP ELSEIFEXP OREXP
+\                              ANDEXP
 
 " Repeat statements
-syn keyword	jbiRepeat UNTIL WHILE ENDWHILE
-
-" Label statements
-syn keyword	jbiLabel CASE DEFAULT LABEL QUE
+syn keyword	jbiRepeat UNTIL WHILE ENDWHILE FOR START NEXT
 
 " Operators
 syn keyword	jbiOperator EXPRESS
+syn match 	jbiOperator /[+\-*/=<>]/
 
-syn keyword	jbiFunction MID VAL
+" Delimiter
+syn match 	jbiDelimiter /[:\[\]()]/
+
+" Label statements
+syn keyword	jbiLabel CASE DEFAULT LABEL QUE
+syn match 	jbiLabel /\v\*@1<=(\u|\d)+>/
+
+syn keyword	jbiFunction ASC MID VAL LEN CAT
 
 " Function parameters
 syn keyword	jbiType ACC ALL AMP ANGL ANT AN3 AN4 ATT AV AVP BF BP BV CR
@@ -74,21 +82,13 @@ syn keyword	jbiType ACC ALL AMP ANGL ANT AN3 AN4 ATT AV AVP BF BP BV CR
 \                       WELDn WTM
 
 " Inform types
-syn match	jbiType /B\d\d\d\|B\[/hs=s,he=s+1
-syn match	jbiType /LB\d\d\d\|LB\[/hs=s,he=s+2
-syn match	jbiType /I\d\d\d\|I\[/hs=s,he=s+1
-syn match	jbiType /LI\d\d\d\|LI\[/hs=s,he=s+2
-syn match	jbiType /D\d\d\d\|D\[/hs=s,he=s+1
-syn match	jbiType /LD\d\d\d\|LD\[/hs=s,he=s+2
-syn match	jbiType /R\d\d\d\|R\[/hs=s,he=s+1
-syn match	jbiType /LR\d\d\d\|LR\[/hs=s,he=s+2
-syn match	jbiType /S\d\d\d\|S\[/hs=s,he=s+1
-syn match	jbiType /LS\d\d\d\|LS\[/hs=s,he=s+2
+syn match	jbiType /\v(<|<ARGF)@4<=L?[BIDRS](\d{3}>|\[)@=/
 
-syn match	jbiType /P\d\d\d\|P\[/hs=s,he=s+1
-syn match	jbiType /PX\d\d\d\|PX\[/hs=s,he=s+2
-syn match	jbiType /LP\d\d\d\|LP\[/hs=s,he=s+2
-syn match	jbiType /LPX\d\d\d\|LPX\[/hs=s,he=s+3
+syn match	jbiType /\v(<|<ARGF)@4<=L?PX?(\d{3}>|\[)@=/
+syn match 	jbiType /\v(<|<ARGF)@4<=LBP(\d{3}>|\[)@=/
+
+" positions
+syn match 	jbiType /\v(<|<ARGF)@4<=B?(P|C)(\d{3,5}>)@=/
 
 " Special keywords
 syn match	jbiSpecial "AEF#"
@@ -104,15 +104,17 @@ syn match	jbiSpecial "IN#"
 syn match	jbiSpecial "IGH#"
 syn match	jbiSpecial "IG#"
 syn match	jbiSpecial "JET#"
-syn match	jbiSpecial /JOB:/hs=s,he=e-1
+syn match	jbiSpecial /\<JOB:\@=/
 syn match	jbiSpecial "LONG"
 syn match	jbiSpecial "MREG#"
 syn match	jbiSpecial "OT#"
+syn match	jbiSpecial "OG#"
 syn match	jbiSpecial "OGH#"
 syn match	jbiSpecial "OH#"
 syn match	jbiSpecial "RIN#"
 syn match	jbiSpecial "SHORT"
 syn match	jbiSpecial "SIN#"
+syn match	jbiSpecial "STEP#"
 syn match	jbiSpecial "SOUT#"
 syn match	jbiSpecial "TL#"
 syn match	jbiSpecial "UF#"
@@ -128,7 +130,7 @@ syn region	jbiString start=+"+ end=+"+ end=+$+
 " Specify job header region
 syn region	jbiHeader start=+/+ end=+$+ contains=jbiNumbers
 
-syn match	jbiNumbers "[0-9]"
+syn match	jbiNumbers "\<[0-9.]\+\>"
 
 syn keyword	jbiTodo contained TODO FIXME
 
@@ -155,6 +157,7 @@ if version >= 508 || !exists("did_basic_syn_inits")
   HiLink jbiRepeat		Repeat
   HiLink jbiLabel		Label
   HiLink jbiOperator		Operator
+  HiLink jbiDelimiter		Delimiter
 
   HiLink jbiHeader		PreProc
 

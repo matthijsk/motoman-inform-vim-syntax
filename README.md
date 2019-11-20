@@ -1,49 +1,52 @@
-jbi.vim
-=======
+## motoman-inform-vim-plugin
 
-Vim syntax file for Motoman INFORM III.
-----------------------------------------------------------------------
+## [Vim][1] syntax and filetype plugin for [Motoman][2] INFORM III.
 
 ### Installation
 
-Copy jbi.vim to `~/.vim/syntax/` or `$VIMRUNTIME/syntax/`.
-Use the command
+#### Installation with vim-plug:
+
+Put this in your .vimrc:
 
 ```vim
-    :set ft=jbi
+call plug#begin('~/.vim/plugged')
+  Plug 'matthijsk/motoman-inform-vim-syntax'
+call plug#end()
 ```
 
-to enable syntax highlighting for jbi files.
+For the first installation run:
 
-### Automatic filetype detection
+    :PlugInstall
 
-You might want to add the following lines to `~/.vim/filetype.vim` to enable
-automatic detection of the jbi filetype:
-    
+Update every once in a while with:
+
+    :PlugUpdate
+
+#### Manual installation
+
+Extract and copy the folders 
+`/ftdetect`, `/ftplugin` and `/syntax` 
+into your 
+`~/.vim/` or `%USERPROFILE%\vimfiles\` 
+directory. 
+Overwrite jbi.vim files from older installation.
+
+Put the following in your .vimrc:
+
 ```vim
-    " Detect INFORM III filetype.
-    augroup filetypedetect
-      au BufRead,BufNewFile *.jbi		setfiletype jbi
-      au BufRead,BufNewFile *.JBI		setfiletype jbi
-    augroup END
+syntax on
+filetype plugin on
 ```
+
 
 ### Navigating jobs
 
 It's nice to be able to quickly navigate through the source code, especially
-if you make heavy use of `CALL JOB:<JOBNAME>` statements. When editing a C or
-C++ file with Vim the current file under the cursor can be opened using `gf`
-or `CTRL-W_CTRL-F`. To enable this for .jbi files add the following to your
-.vimrc:
-
-```vim
-    " Add suffixes to enable 'gf' commands on CALL JOB:<JOB> lines.
-    set suffixesadd+=.JBI,.jbi
-
-    " Set path to jbi files. Replace this with the path to your actual working
-    " directory.
-    set path+=/path/to/jbi/files
-```
+if you make heavy use of `CALL JOB:<JOBNAME>` statements. The current file
+under the cursor can be opened using `gf` or `CTRL-W_CTRL-F`. This also work
+on directory and will open the netrw plugin shipped with Vim. After a few `gf`
+you can go back with `Ctrl-O` (**O**lder position) and go back in with `Ctrl-I`
+(go back **I**n).
 
 ### Screenshots
 
@@ -62,3 +65,6 @@ or `CTRL-W_CTRL-F`. To enable this for .jbi files add the following to your
 #### xoria256
 
 ![xoria256 colorscheme](https://github.com/matthijsk/motoman-inform-vim-syntax/raw/master/img/sample-xoria256.png "xoria256")
+
+[1]: https://www.vim.org/
+[2]: https://www.motoman.com/products/robots/industrial
