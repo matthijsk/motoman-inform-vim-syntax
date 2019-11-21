@@ -24,9 +24,10 @@ syn keyword	jbiStatement JUMP CALL TIMER RET NOP PAUSE CWAIT NWAIT ENWAIT
 
 " Operating instructions
 syn keyword	jbiFunction CLEAR INC DEC SET ADD SUB MUL DIV CNVRT AND OR NOT
-\                           XOR MFRAME SETE GETE GETS SQRT SIN COS ATAN MULMAT
+\                           XOR MFRAME SETE GETE GETS SQRT COS ATAN MULMAT
 \                           INVMAT SETFILE GETFILE SETREG GETREG VAL2STR
 \                           GETPOS ALMCHK TSYNC
+syn match 	jbiFunction /\<SIN\>/ " avoid false highlight of SIN#(5); This one will be overridden by syn match jbiSpecial
 
 " Move instructions
 syn keyword	jbiFunction MOVJ MOVL MOVC MOVS IMOV SPEED REFP
@@ -120,7 +121,7 @@ syn match	jbiSpecial "$RV"
 
 " Label statements
 syn keyword	jbiLabel CASE DEFAULT LABEL QUE
-syn match 	jbiLabel /\v\*@1<=(\w|\d)+>/
+syn match 	jbiLabel /\v\*@1<=(\w|\d|-)+>/
 
 " Specify comment region
 syn region	jbiComment start=+'+ end=+$+ contains=jbiTodo
