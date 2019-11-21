@@ -20,12 +20,13 @@ syn keyword	jbiFunction DOUT DIN WAIT PULSE AOUT ARATION ARATIOF ANTOUT
 " Control instructions
 syn keyword	jbiStatement JUMP CALL TIMER RET NOP PAUSE CWAIT NWAIT ENWAIT
 \                            MSG ADVINIT ADVSTOP END PSTART PWAIT NSRCH COMM
+\                            ABORT
 
 " Operating instructions
 syn keyword	jbiFunction CLEAR INC DEC SET ADD SUB MUL DIV CNVRT AND OR NOT
 \                           XOR MFRAME SETE GETE GETS SQRT SIN COS ATAN MULMAT
 \                           INVMAT SETFILE GETFILE SETREG GETREG VAL2STR
-\                           GETPOS
+\                           GETPOS ALMCHK TSYNC
 
 " Move instructions
 syn keyword	jbiFunction MOVJ MOVL MOVC MOVS IMOV SPEED REFP
@@ -69,10 +70,6 @@ syn match 	jbiOperator /[+\-*/=<>]/
 " Delimiter
 syn match 	jbiDelimiter /[:\[\]()]/
 
-" Label statements
-syn keyword	jbiLabel CASE DEFAULT LABEL QUE
-syn match 	jbiLabel /\v\*@1<=(\u|\d)+>/
-
 syn keyword	jbiFunction ASC MID VAL LEN CAT
 
 " Function parameters
@@ -82,10 +79,10 @@ syn keyword	jbiType ACC ALL AMP ANGL ANT AN3 AN4 ATT AV AVP BF BP BV CR
 \                       WELDn WTM
 
 " Inform types
-syn match	jbiType /\v(<|<ARGF)@4<=L?[BIDRS](\d{3}>|\[)@=/
+syn match	jbiType /\v(<|<ARGF)@4<=L?[BIDRS](\d{3,5}>|\[)@=/
 
-syn match	jbiType /\v(<|<ARGF)@4<=L?PX?(\d{3}>|\[)@=/
-syn match 	jbiType /\v(<|<ARGF)@4<=LBP(\d{3}>|\[)@=/
+syn match	jbiType /\v(<|<ARGF)@4<=L?PX?(\d{3,5}>|\[)@=/
+syn match 	jbiType /\v(<|<ARGF)@4<=LBP(\d{3,5}>|\[)@=/
 
 " positions
 syn match 	jbiType /\v(<|<ARGF)@4<=B?(P|C)(\d{3,5}>)@=/
@@ -120,6 +117,10 @@ syn match	jbiSpecial "TL#"
 syn match	jbiSpecial "UF#"
 syn match	jbiSpecial "WEV#"
 syn match	jbiSpecial "$RV"
+
+" Label statements
+syn keyword	jbiLabel CASE DEFAULT LABEL QUE
+syn match 	jbiLabel /\v\*@1<=(\w|\d)+>/
 
 " Specify comment region
 syn region	jbiComment start=+'+ end=+$+ contains=jbiTodo
