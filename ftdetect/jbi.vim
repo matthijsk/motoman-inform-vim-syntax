@@ -2,7 +2,7 @@
 " Language:	INFORM III
 " Maintainer:	Matthijs Kool <matthijzkNOSPAMPLZgmailKTHXBAIcom>
 " Contributor:  Patrick Meiser-Knosowski knosowski@graeff.de
-" Last Change:	2019 Nov 17
+" Last Change:	29. Apr 2020
 
 " Detect INFORM III filetype
 au BufRead,BufnewFile \c*.jbi setf jbi
