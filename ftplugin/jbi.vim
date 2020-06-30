@@ -2,7 +2,7 @@
 " Language:	INFORM III
 " Maintainer:	Matthijs Kool <matthijzkNOSPAMPLZgmailKTHXBAIcom>
 " Contributor:  Patrick Meiser-Knosowski knosowski@graeff.de
-" Last Change:	2019 Nov 17
+" Last Change:	29. Apr 2020
 
 " Only do this when not done yet for this buffer
 if exists("b:did_ftplugin")
