@@ -1,8 +1,8 @@
 " Vim file type plugin for the Motoman INFORM III robot programming language.
 " Language:	INFORM III
 " Maintainer:	Matthijs Kool <matthijzkNOSPAMPLZgmailKTHXBAIcom>
-" Contributor:  Patrick Meiser-Knosowski knosowski@graeff.de
-" Last Change:	29. Apr 2020
+" Contributor:  Patrick Meiser-Knosowski knosowski@graeffrobotics.de
+" Last Change:	29. Apr 2021
 
 " Only do this when not done yet for this buffer
 if exists("b:did_ftplugin")
